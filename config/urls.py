@@ -20,7 +20,10 @@ from strawberry.django.views import GraphQLView
 from contact.schema import schema
 from django.views.decorators.csrf import csrf_exempt
 
+from .run_migrations import run_migrations 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("graphql/", csrf_exempt(GraphQLView.as_view(schema=schema, allow_queries_via_get=True))),
+    path("run-migrations/", run_migrations),
 ]
