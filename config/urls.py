@@ -25,5 +25,4 @@ from .run_migrations import run_migrations
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("graphql/", csrf_exempt(GraphQLView.as_view(schema=schema, allow_queries_via_get=True))),
-    path("run-migrations/", run_migrations),
 ]
