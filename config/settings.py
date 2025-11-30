@@ -31,7 +31,13 @@ SECRET_KEY = 'django-insecure-7jz*zioe19ur*=ff)#2#ir7#$9r%h$h=hk4^d94f7h)qqvw#7n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".onrender.com",
+    "medbary.ca",
+    "www.medbary.ca",
+]
 
 
 # Application definition
@@ -152,6 +158,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "https://medbary.vercel.app", 
     "https://www.medbary.ca",
+    "https://medbary.ca",
 ]
 CORS_ALLOW_METHODS = ["GET", "POST", "OPTIONS"]
 CORS_ALLOW_HEADERS = None
